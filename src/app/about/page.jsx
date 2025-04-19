@@ -4,7 +4,7 @@ import Image from "next/image";
 function About() {
   return (
     <div className="flex flex-col justify center">
-      <div>
+      <>
         <h1>About</h1>
         <div className='flex flex-row'>
             <Image
@@ -16,7 +16,7 @@ function About() {
             />
             <div></div>
         </div>
-      </div>
+      </>
       <div>
         <MySkills />
       </div>

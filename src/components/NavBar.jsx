@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Button } from "./ui/button";
 
 
 const NavBar = () => {
@@ -24,9 +25,9 @@ const NavBar = () => {
 
     return (
         <nav
-            className="text-white fixed top-0 w-full transition-all duration-300 ease-in-out bg-white/50 m-5 rounded-full"
+            className="text-white fixed top-0 w-full transition-all duration-300 ease-in-out bg-white/50"
         >
-            <div className="mx-auto p-1 sm:p-2 lg:p-1">
+            <div className="mx-auto p-1 sm:p-2 lg:p-1 rounded-full">
                 <div className="flex justify-around items-center ">
                     <Link
                         href="/"
@@ -60,6 +61,9 @@ const NavBar = () => {
                             Contact
                         </Link>
                     </div>
+                    <Button variant="outline" className="bg-blue-500 text-white hover:bg-blue-600 transition-all ease-in-out duration-300">
+                        <Link href="/login">Contact Me</Link>
+                    </Button>
                 </div>
             </div>
         </nav>

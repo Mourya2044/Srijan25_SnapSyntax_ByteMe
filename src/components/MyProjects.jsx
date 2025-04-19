@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function MyProject() {
   const projects = [
-    { id: 1, name: "Project 1", date: "29-02-2020"},
-    { id: 2, name: "Project 2", date: "29-02-2020"},
-    { id: 3, name: "Project 3", date: "29-02-2020"},
-    { id: 4, name: "Project 4", date: "29-02-2020"}
+    { id: 1, name: "Project 1", date: "29-02-2020", image: "/img1.jpeg"},
+    { id: 2, name: "Project 2", date: "29-02-2020", image: "/img2.jpeg"},
+    { id: 3, name: "Project 3", date: "29-02-2020", image: "/img3.jpeg"},
+    { id: 4, name: "Project 4", date: "29-02-2020", image: "/img4.jpeg"}
   ];
 
   return (
@@ -28,7 +28,7 @@ export default function MyProject() {
                   <div className={`flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
                     <div className="w-2/5">
                       <img 
-                        src={`/api/placeholder/300/200`}
+                        src={project.image}
                         alt={`${project.name} image`}
                         className="w-full h-full object-cover"
                       />

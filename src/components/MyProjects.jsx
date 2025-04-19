@@ -1,31 +1,49 @@
 import React from 'react';
 
-const projects = [
-  { name: 'project1', image: 'https://example.com/cpp.png', date: '2023-01-01'},
-  { name: 'project2', image: 'https://example.com/cpp.png', date: '2023-01-01'},
-  { name: 'project3', image: 'https://example.com/cpp.png', date: '2023-01-01'},
-  { name: 'project4', image: 'https://example.com/cpp.png', date: '2023-01-01'}
-];
+export default function MyProject() {
+  const projects = [
+    { id: 1, name: "Project 1", description: "Description for project 1" },
+    { id: 2, name: "Project 2", description: "Description for project 2" },
+    { id: 3, name: "Project 3", description: "Description for project 3" },
+    { id: 4, name: "Project 4", description: "Description for project 4" }
+  ];
 
-const MyProjects = () => {
-    return (
-      <div className="max-w-2xl mx-auto p-6 mt-10 bg-gray-900 rounded-2xl shadow-xl text-white">
-        <h2 className="text-4xl font-bold text-center mb-8">My Skills</h2>
-        {skills.map((skill, index) => (
-          <div key={index} className="flex items-center justify-between mb-6">
-            <span className="text-lg font-medium">{skill.name}</span>
-            <div className="flex gap-1">
-              {[...Array(10)].map((_, i) => (
-                <div
-                  key={i}
-                  className={`w-4 h-4 rounded-full ${
-                    i < skill.level ? 'bg-blue-500' : 'bg-gray-600'
-                  }`}
-                ></div>
-              ))}
-            </div>
-          </div>
-        ))}
+  return (
+    <div className="min-h-screen bg-gray-900 p-8">
+      <div className="max-w-6xl mx-auto">
+        <h1 className="text-white text-3xl font-bold mb-10 text-center">
+          My Project
+        </h1>
+        
+        <div className="space-y-12">
+          {projects.map((project, index) => {
+            const isEven = (index + 1) % 2 === 0;
+            
+            return (
+              <div 
+                key={project.id} 
+                className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}
+              >
+                <div className="w-1/2 bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                  <div className={`flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
+                    <div className="w-2/5">
+                      <img 
+                        src={`/api/placeholder/300/200`}
+                        alt={`${project.name} image`}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="w-3/5 p-6">
+                      <h2 className="text-white text-xl font-semibold mb-3">{project.name}</h2>
+                      <p className="text-white">{project.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </div>
-    );
-  };
+    </div>
+  );
+}

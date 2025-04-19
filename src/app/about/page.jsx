@@ -2,10 +2,13 @@ import MySkills from "@/components/MySkills";
 
 function About() {
   return (
-    <div>
+    <div className="flex flex-col justify center">
       <div>
         <h1>About</h1>
-        <p>This is the about page of our application.</p>
+        <div className='flex flex-row'>
+            <Image></Image>
+            <div></div>
+        </div>
       </div>
       <div>
         <MySkills />
@@ -13,9 +16,13 @@ function About() {
       <div>
         <h2>My Projects</h2>
         <ul>
-          <li>Project 1</li>
-          <li>Project 2</li>
-          <li>Project 3</li>
+          {projects.map((project, index) => (
+            <li key={index}>
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+              <img src={project.image1} alt={`${project.name} image 1`} />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

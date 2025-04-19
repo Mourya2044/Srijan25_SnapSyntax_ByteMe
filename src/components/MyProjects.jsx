@@ -24,16 +24,16 @@ export default function MyProject() {
                 key={project.id} 
                 className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}
               >
-                <div className="w-1/2 bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                <div className=" bg-gray-800 rounded-lg shadow-lg overflow-hidden">
                   <div className={`flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
                     <div className="w-2/5">
                       <img 
                         src={project.image}
                         alt={`${project.name} image`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <div className="w-2/5 p-2-5">
+                    <div className=" rounded-lg">
                       <h2 className="text-white text-xl font-semibold mb-3">{project.name}</h2>
                       <p className="text-white">{project.date}</p>
                     </div>

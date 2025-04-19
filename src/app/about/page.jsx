@@ -1,3 +1,41 @@
+
+import React from 'react';
+
+const projects = [
+    {
+        name: "Project 1",
+        description: "Description of Project 1",
+        image1: "/images/project1-1.jpg"
+    },
+    {
+        name: "Project 2",
+        description: "Description of Project 2",
+        image1: "/images/project2-1.jpg"
+    },
+    {
+        name: "Project 3",
+        description: "Description of Project 3",
+        image1: "/images/project3-1.jpg"
+    },
+]
+
+const skills = [
+    {
+        name: "Skill 1"
+    },
+    {
+        name: "Skill 2"
+    },
+    {
+        name: "Skill 3"
+    },
+    {
+        name:" Skill 4"
+    }
+]
+
+
+
 function About() {
   return (
     <div>
@@ -7,13 +45,22 @@ function About() {
       </div>
       <div>
         <h2>My Skills</h2>
+        <ul>
+          {skills.map((skill, index) => (
+            <li key={index}>{skill.name}</li>
+          ))}
+        </ul>
       </div>
       <div>
         <h2>My Projects</h2>
         <ul>
-          <li>Project 1</li>
-          <li>Project 2</li>
-          <li>Project 3</li>
+          {projects.map((project, index) => (
+            <li key={index}>
+              <h3>{project.name}</h3>
+              <p>{project.description}</p>
+              <img src={project.image1} alt={`${project.name} image 1`} />
+            </li>
+          ))}
         </ul>
       </div>
     </div>

@@ -7,28 +7,15 @@ import { Button } from "./ui/button";
 
 
 const NavBar = () => {
-    const [isScrolled, setIsScrolled] = useState(false);
-
-    useEffect(() => {
-        window.addEventListener('scroll', () => {
-            setIsScrolled(window.scrollY > 50);
-
-            console.log(window.scrollY, isScrolled);
-        })
-
-        return () => {
-
-        }
-    },)
 
 
 
     return (
         <nav
-            className="text-white fixed top-0 w-full transition-all duration-300 ease-in-out bg-white/50"
+            className="text-white fixed top-0 w-full transition-all duration-300 ease-in-out"
         >
-            <div className="mx-auto p-1 sm:p-2 lg:p-1 rounded-full">
-                <div className="flex justify-around items-center ">
+            <div className="m-5 p-1 sm:p-2 lg:p-1 bg-white/50 backdrop-blur-md shadow-lg rounded-full text-lg">
+                <div className="flex justify-between items-center px-5 py-3">
                     <Link
                         href="/"
                         className="transition-all ease-in-out duration-300 hover:scale-110  px-2 py-1 rounded-sm"
@@ -61,7 +48,7 @@ const NavBar = () => {
                             Contact
                         </Link>
                     </div>
-                    <Button variant="outline" className="bg-blue-500 text-white hover:bg-blue-600 transition-all ease-in-out duration-300">
+                    <Button variant="outline" className="bg-white/80 rounded-full text-xl text-black transition-all ease-in-out duration-300">
                         <Link href="/login">Contact Me</Link>
                     </Button>
                 </div>

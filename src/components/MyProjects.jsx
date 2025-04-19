@@ -2,10 +2,10 @@ import React from 'react';
 
 export default function MyProject() {
   const projects = [
-    { id: 1, name: "Project 1", description: "Description for project 1" },
-    { id: 2, name: "Project 2", description: "Description for project 2" },
-    { id: 3, name: "Project 3", description: "Description for project 3" },
-    { id: 4, name: "Project 4", description: "Description for project 4" }
+    { id: 1, name: "Project 1", date: "29-02-2020"},
+    { id: 2, name: "Project 2", date: "29-02-2020"},
+    { id: 3, name: "Project 3", date: "29-02-2020"},
+    { id: 4, name: "Project 4", date: "29-02-2020"}
   ];
 
   return (
@@ -33,9 +33,9 @@ export default function MyProject() {
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="w-3/5 p-6">
+                    <div className="w-2/5 p-2-5">
                       <h2 className="text-white text-xl font-semibold mb-3">{project.name}</h2>
-                      <p className="text-white">{project.description}</p>
+                      <p className="text-white">{project.date}</p>
                     </div>
                   </div>
                 </div>

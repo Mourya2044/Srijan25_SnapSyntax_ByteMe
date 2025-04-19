@@ -14,7 +14,7 @@ const AboutMe = () => {
         {/* Image */}
         <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6 w-full sm:w-1/3 flex justify-center">
           <img
-            src="https://via.placeholder.com/150"
+            src="/https://placehold.co/600x400.png"
             alt="My Photo"
             className="rounded-lg object-cover h-40 w-40"
           />

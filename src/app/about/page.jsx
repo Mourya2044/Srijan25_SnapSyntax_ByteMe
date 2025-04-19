@@ -3,13 +3,13 @@ import MySkills from "@/components/MySkills";
 function About() {
   return (
     <div className="flex flex-col justify center">
-      <div>
+      <>
         <h1>About</h1>
         <div className='flex flex-row'>
             <Image></Image>
             <div></div>
         </div>
-      </div>
+      </>
       <div>
         <MySkills />
       </div>

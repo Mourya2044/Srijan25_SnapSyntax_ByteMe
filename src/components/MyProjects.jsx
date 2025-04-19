@@ -2,16 +2,16 @@ import React from 'react';
 
 export default function MyProject() {
   const projects = [
-    { id: 1, name: "Project 1", description: "Description for project 1" },
-    { id: 2, name: "Project 2", description: "Description for project 2" },
-    { id: 3, name: "Project 3", description: "Description for project 3" },
-    { id: 4, name: "Project 4", description: "Description for project 4" }
+    { id: 1, name: "Project 1", date: "29-02-2020", image: "/img1.jpeg"},
+    { id: 2, name: "Project 2", date: "29-02-2020", image: "/img2.jpeg"},
+    { id: 3, name: "Project 3", date: "29-02-2020", image: "/img3.jpeg"},
+    { id: 4, name: "Project 4", date: "29-02-2020", image: "/img4.jpeg"}
   ];
 
   return (
     <div className="min-h-screen bg-gray-900 p-8">
       <div className="max-w-6xl mx-auto">
-        <h1 className="text-white text-3xl font-bold mb-10 text-center">
+        <h1 className="text-white text-3xl font-bold mb-10 text-center ">
           My Project
         </h1>
         
@@ -24,18 +24,18 @@ export default function MyProject() {
                 key={project.id} 
                 className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}
               >
-                <div className="w-1/2 bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                <div className=" bg-gray-900 rounded-lg shadow-lg overflow-hidden">
                   <div className={`flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
                     <div className="w-2/5">
                       <img 
-                        src={`/api/placeholder/300/200`}
+                        src={project.image}
                         alt={`${project.name} image`}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-lg"
                       />
                     </div>
-                    <div className="w-3/5 p-6">
+                    <div className=" rounded-lg">
                       <h2 className="text-white text-xl font-semibold mb-3">{project.name}</h2>
-                      <p className="text-white">{project.description}</p>
+                      <p className="text-white">{project.date}</p>
                     </div>
                   </div>
                 </div>

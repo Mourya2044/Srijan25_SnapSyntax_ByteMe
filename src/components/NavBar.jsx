@@ -49,7 +49,7 @@ const NavBar = () => {
                         </Link>
                     </div>
                     <Button variant="outline" className="bg-white/80 rounded-full text-xl text-black transition-all ease-in-out duration-300">
-                        <Link href="/login">Contact Me</Link>
+                        <Link href="/contact">Contact Me</Link>
                     </Button>
                 </div>
             </div>

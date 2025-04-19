@@ -9,7 +9,7 @@ export default function MyProject() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-900 p-8">
+    <div className="min-h-screen  p-8">
       <div className="max-w-6xl mx-auto">
         <h1 className="text-white text-3xl font-bold mb-10 text-center ">
           My Project
@@ -24,7 +24,7 @@ export default function MyProject() {
                 key={project.id} 
                 className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}
               >
-                <div className=" bg-gray-900 rounded-lg shadow-lg overflow-hidden">
+                <div className=" rounded-lg shadow-lg overflow-hidden">
                   <div className={`flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
                     <div className="w-2/5">
                       <img 

@@ -21,16 +21,16 @@ const projects = [
 
 const skills = [
     {
-        name: "Skill 1"
+        name: "CSS...."
     },
     {
-        name: "Skill 2"
+        name: "Figma...."
     },
     {
-        name: "Skill 3"
+        name: "React...."
     },
     {
-        name:" Skill 4"
+        name:"Tailwindcss"
     }
 ]
 
@@ -38,7 +38,7 @@ const skills = [
 
 function About() {
   return (
-    <div>
+    <div className="flex flex-col justify center">
       <div>
         <h1>About</h1>
         <p>This is the about page of our application.</p>

@@ -41,7 +41,10 @@ function About() {
     <div className="flex flex-col justify center">
       <div>
         <h1>About</h1>
-        <p>This is the about page of our application.</p>
+        <div className='flex flex-row'>
+            <Image></Image>
+            <div></div>
+        </div>
       </div>
       <div>
         <h2>My Skills</h2>

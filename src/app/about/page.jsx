@@ -1,3 +1,5 @@
+import MySkills from "@/components/MySkills";
+
 function About() {
   return (
     <div>
@@ -6,7 +8,7 @@ function About() {
         <p>This is the about page of our application.</p>
       </div>
       <div>
-        <h2>My Skills</h2>
+        <MySkills />
       </div>
       <div>
         <h2>My Projects</h2>

@@ -1,4 +1,5 @@
 import MySkills from "@/components/MySkills";
+import Image from "next/image";
 
 function About() {
   return (
@@ -6,13 +7,13 @@ function About() {
       <div>
         <h1>About</h1>
         <div className='flex flex-row'>
-            <Image>
+            <Image
                 src="https://example.com/cpp.png"
                 alt="My Image"
                 width={500}
                 height={500}
                 className="rounded-full"
-            </Image>
+            />
             <div></div>
         </div>
       </div>

@@ -24,7 +24,7 @@ export default function MyProject() {
                 key={project.id} 
                 className={`flex ${isEven ? 'justify-end' : 'justify-start'}`}
               >
-                <div className=" rounded-lg shadow-lg overflow-hidden">
+                <div className=" rounded-lg overflow-hidden">
                   <div className={`flex ${isEven ? 'flex-row-reverse' : 'flex-row'}`}>
                     <div className="w-2/5">
                       <img 

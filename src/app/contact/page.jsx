@@ -3,7 +3,7 @@ import './Contact.css';
 
 const Contact = () => {
   return (
-    <div className="contact-page">
+    <div className="contact-page bg-gradient-to-r from-black to-purple-900">
       <h2>Contact</h2>
       <div className="contact-box">
         <form>
